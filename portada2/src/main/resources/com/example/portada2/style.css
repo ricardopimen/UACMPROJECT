@@ -1,0 +1,38 @@
+.root {
+    -fx-background-color: linear-gradient(to top left, #404C86 0%, #7185EC 25%, #404C86 50%, #7185EC 75%, #404C86 100%);
+    -fx-alignment: center;  /* Centra el contenido del VBox horizontalmente */
+
+}
+.menu-bar .label {
+            -fx-text-fill: white; /* Cambia 'white' por el color que desees */
+        }
+
+/* style.css */
+.container {
+    -fx-background-color: linear-gradient(to top left, #3BB9D6 34%, #37ACC6 43%, #1F6170 100%); /* Color de fondo */
+    -fx-text-fill: white;
+    -fx-background-radius: 15; /* Redondeo de esquinas */
+    -fx-border-radius: 15; /* Redondeo de esquinas del borde */
+    -fx-border-color: white; /* Color del borde */
+    -fx-border-width: 2; /* Ancho del borde */
+    -fx-padding: 10; /* Espacio interno */
+    -fx-transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+.container:hover {
+    -fx-background-color: #DBA025;
+    -fx-border-color: #0073e6;
+}
+
+.image-view {
+    -fx-background-radius: 15; /* Redondeo de esquinas */
+    -fx-border-radius: 15; /* Redondeo de esquinas del borde */
+}
+
+.button {
+    -fx-background-radius: 15; /* Redondeo de esquinas */
+    -fx-border-radius: 15; /* Redondeo de esquinas del borde */
+    -fx-border-color: transparent; /* Color del borde */
+    -fx-border-width: 2; /* Ancho del borde */
+}

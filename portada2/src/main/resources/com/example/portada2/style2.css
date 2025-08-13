@@ -1,0 +1,52 @@
+/* Estilo general para la aplicación */
+.root {
+    -fx-font-family: "Arial", sans-serif; /* Fuente principal */
+    -fx-background-color: #254A66; /* Color de fondo */
+}
+
+/* Estilo para los botones */
+.button {
+    -fx-background-color: #007bff; /* Color de fondo azul */
+    -fx-text-fill: #ffffff; /* Texto en blanco */
+    -fx-border-color: #007bff; /* Borde azul */
+    -fx-border-radius: 5px; /* Bordes redondeados */
+    -fx-padding: 8px 15px; /* Espaciado interno */
+}
+.button:hover {
+    -fx-background-color: #0069d9; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+/* Estilo para la tabla */
+.table-view {
+    -fx-background-color: #ffffff; /* Fondo blanco para la tabla */
+    -fx-border-color: #cccccc; /* Borde gris claro */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0; /* Color de fondo para los encabezados */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Color de fondo alternado para las filas impares */
+}
+/* Estilo para el label de coordenadas */
+
+#titulo {
+ -fx-text-fill: white; /* Cambiar el color del texto a blanco */
+ }
+
+/* style2.css */
+.label-title {
+    -fx-text-fill: white; /* Cambiar el color del texto a blanco */
+}
+.axis-label {
+    -fx-text-fill: white;
+}
+
+.label-coordinates {
+    -fx-text-fill: white; /* Cambiar el color del texto a blanco */
+}
+.axis {
+    -fx-tick-label-fill: white; /* Color de los números en los ejes */
+    -fx-minor-tick-length: 0; /* Ocultar las marcas menores */
+}

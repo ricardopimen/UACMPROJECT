@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane prefHeight="478.0" prefWidth="593.0" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="com.example.portada2.HelloController">
+    <top>
+        <MenuBar fx:id="menuContainer" prefHeight="28.0" prefWidth="492.0">
+            <menus>
+                <Menu text="Acerca de">
+                    <MenuItem text="Acerca de" onAction="#mostrarAcercaDe" />
+                </Menu>
+                <Menu text="Tareas">
+                    <MenuItem text="Tareas" onAction="#mostrarMensajeTareas" />
+                </Menu>
+                <Menu text="Proyectos">
+                    <MenuItem text="Proyectos" onAction="#mostrarMensajeProyectos" />
+                </Menu>
+                <Menu text="Contactos">
+                    <MenuItem text="Contactos" onAction="#mostrarMensajeContactos" />
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox fx:id="imagenContainer" spacing="20" alignment="CENTER" prefWidth="300" prefHeight="450">
+            <children>
+                <ImageView fitWidth="300" preserveRatio="true" styleClass="image-view">
+                    <Image url="@uacm.png" />
+                </ImageView>
+                <HBox spacing="20" alignment="CENTER">
+                    <children>
+                        <VBox fx:id="container1" spacing="10" alignment="CENTER" styleClass="container" prefWidth="200" prefHeight="600">
+                            <children>
+                                <ImageView fitWidth="200" preserveRatio="true" VBox.vgrow="ALWAYS" styleClass="image-view">
+                                    <Image url="@volante1.png" />
+                                </ImageView>
+                                <Button text="Entrar" VBox.vgrow="NEVER" styleClass="button" onAction="#abrirVentanaVolante" />
+                                <ImageView fx:id="imagenUbicacion" fitWidth="60" preserveRatio="true" VBox.vgrow="NEVER" styleClass="image-view">
+                                    <Image url="@UBICACION.png" />
+                                </ImageView>
+                            </children>
+                        </VBox>
+                        <VBox fx:id="container2" spacing="10" alignment="CENTER" styleClass="container" prefWidth="200" prefHeight="600">
+                            <children>
+                                <ImageView fitWidth="200" preserveRatio="true" VBox.vgrow="ALWAYS" styleClass="image-view">
+                                    <Image url="@riel2.png" />
+                                </ImageView>
+                                <Button text="Entrar" VBox.vgrow="NEVER" styleClass="button" onAction="#mostrarMensajeNoDisponible" />
+                                <ImageView fx:id="imagenGithub" fitWidth="60" preserveRatio="true" VBox.vgrow="NEVER" styleClass="image-view">
+                                    <Image url="@GITHUB.png" />
+                                </ImageView>
+                            </children>
+                        </VBox>
+                        <VBox fx:id="container3" spacing="10" alignment="CENTER" styleClass="container" prefWidth="200" prefHeight="600">
+                            <children>
+                                <ImageView fitWidth="200" preserveRatio="true" VBox.vgrow="ALWAYS" styleClass="image-view">
+                                    <Image url="@volante.png" />
+                                </ImageView>
+                                <Button text="Entrar" VBox.vgrow="NEVER" styleClass="button" onAction="#mostrarMensajeNoDisponible" />
+                                <ImageView fx:id="imagenFacebook" fitWidth="60" preserveRatio="true" VBox.vgrow="NEVER" styleClass="image-view">
+                                    <Image url="@FACEBOOK.png" />
+                                </ImageView>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
