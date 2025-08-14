@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Laboratorios UACM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="main-page" class="container active">
+        <header>
+            <div class="logo">
+                <img src="images/uacm.png" alt="Logo UACM">
+            </div>
+            <h2 class="header-title">Laboratorio de Física UACM plantel Casa Libertad</h2>
+            <nav>
+                <a href="#">Acerca de</a>
+                <a href="#">Tareas</a>
+                <a href="#">Proyectos</a>
+                <a href="#">Contactos</a>
+            </nav>
+        </header>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="images/volante1.png" alt="Laboratorio de Física">
+                    <div class="card-overlay">
+                        <h2>Rotacional</h2>
+                    </div>
+                </div>
+                <button class="enter-button" data-target="graph-page">Entrar</button>
+                <div class="card-icon-pin">
+                    <a href="https://www.google.com/maps/place/UACM+Plantel+Casa+Libertad" target="_blank" aria-label="UACM Plantel Casa Libertad en Google Maps">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="images/riel2.png" alt="Fritzing">
+                    <div class="card-overlay">
+                        <h2>Fritzing</h2>
+                    </div>
+                </div>
+                <button class="enter-button">Entrar</button>
+                <div class="card-icon-github">
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="images/volante.png" alt="Electrónica">
+                    <div class="card-overlay">
+                        <h2>Electrónica</h2>
+                    </div>
+                </div>
+                <button class="enter-button">Entrar</button>
+                <div class="card-icon-facebook">
+                    <a href="https://www.facebook.com/UACMCasaLibertad" target="_blank" aria-label="Universidad Autónoma de la Ciudad de México en Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="graph-page" class="container">
+        <header class="graph-header">
+            <a href="#" id="back-button" class="back-button">
+                <i class="fas fa-arrow-left"></i> Regresar
+            </a>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo UACM">
+            </div>
+            <h1>Volante de Inercia</h1>
+        </header>
+        <div class="graph-window">
+            <div class="graph-tabs">
+                <button class="tab-button active" data-tab="graph">Gráfica</button>
+            </div>
+            <div class="graph-content tab-content active">
+                <div class="graph-controls-wrapper">
+                    <canvas id="realTimeChart"></canvas>
+                    <div class="options-content">
+                        <div class="options-group">
+                            <h3>Rango de los Ejes</h3>
+                            <div class="axis-controls">
+                                <div class="input-container">
+                                    <label for="x-min">Eje X (min):</label>
+                                    <input type="number" id="x-min" value="0">
+                                </div>
+                                <div class="input-container">
+                                    <label for="x-max">Eje X (max):</label>
+                                    <input type="number" id="x-max" value="100">
+                                </div>
+                            </div>
+                            <div class="axis-controls">
+                                <div class="input-container">
+                                    <label for="y-min">Eje Y (min):</label>
+                                    <input type="number" id="y-min" value="0">
+                                </div>
+                                <div class="input-container">
+                                    <label for="y-max">Eje Y (max):</label>
+                                    <input type="number" id="y-max" value="100">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="controls-group">
+                            <button id="apply-button" class="control-button">
+                                <i class="fas fa-check"></i> Aplicar
+                            </button>
+                            <button id="run-button" class="control-button">
+                                <i class="fas fa-play"></i> Iniciar
+                            </button>
+                            <button id="stop-button" class="control-button">
+                                <i class="fas fa-stop"></i> Detener
+                            </button>
+                            <button id="reset-zoom-button" class="control-button">
+                                <i class="fas fa-search-minus"></i> Restablecer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="data-table-container">
+                    <h3>Datos seleccionados</h3>
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Punto</th>
+                                <th>Tiempo (X)</th>
+                                <th>Velocidad Angular (Y)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
